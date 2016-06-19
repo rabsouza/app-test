@@ -11,6 +11,7 @@ public class MainApplication extends Application {
     private static final String TAG = MainApplication.class.getSimpleName();
 
     private static MainApplication instance = null;
+    private String user;
 
     public static MainApplication getInstance() {
         return instance;
@@ -28,5 +29,13 @@ public class MainApplication extends Application {
     public void onTerminate() {
         super.onTerminate();
         Log.d(TAG, "onTerminate: MainApplication!");
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 }

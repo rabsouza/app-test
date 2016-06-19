@@ -1,6 +1,7 @@
 package br.com.teste.appteste.mock;
 
-import java.util.HashSet;
+import com.google.common.collect.Sets;
+
 import java.util.Set;
 
 import br.com.teste.appteste.R;
@@ -16,11 +17,16 @@ public class MockMenuItem {
     }
 
     public static Set<MenuItem> createDataMock() {
-        Set<MenuItem> items = new HashSet<MenuItem>();
+        Set<MenuItem> items = Sets.newHashSet();
 
-        items.add(new MenuItem().idRes(R.id.nav_item_affiliates).counter("121"));
-        items.add(new MenuItem().idRes(R.id.nav_item_msgs).counter("+50"));
-        items.add(new MenuItem().idRes(R.id.nav_item_notifications).counter("15"));
+        MenuItem menuItem = new MenuItem().idRes(R.id.nav_item_affiliates).counter("121");
+        items.add(menuItem);
+
+        MenuItem menuItem1 = new MenuItem().idRes(R.id.nav_item_msgs).counter("+50");
+        items.add(menuItem1);
+
+        MenuItem menuItem2 = new MenuItem().idRes(R.id.nav_item_notifications).counter("15");
+        items.add(menuItem2);
 
         return items;
     }

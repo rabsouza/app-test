@@ -4,11 +4,16 @@
     android:layout_height="match_parent"
     tools:context="br.com.teste.appteste.fragment.MySalesFragment">
 
-    <ImageView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_my_sales"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitCenter"
-        android:src="@drawable/em_construcao"
-        android:alpha="0.3"/>
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical" />
 
 </FrameLayout>

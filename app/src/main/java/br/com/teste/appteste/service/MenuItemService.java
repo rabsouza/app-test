@@ -11,7 +11,7 @@ import br.com.teste.appteste.mock.MockMenuItem;
 
 public class MenuItemService {
 
-    public Set<MenuItem> loadActionsCountersByMenuItem(){
+    public Set<MenuItem> findActionsCountersByMenuItem(){
         return MockMenuItem.createDataMock();
     }
 

@@ -28,7 +28,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void loadCountersMenuItems() {
-        Set<MenuItem> items = menuItemService.loadActionsCountersByMenuItem();
+        Set<MenuItem> items = menuItemService.findActionsCountersByMenuItem();
         Log.i(TAG, String.format(
                 "loadCountersMenuItems: Loads counters %s for menu items!", items.size()));
         for (MenuItem menuItem : items) {
