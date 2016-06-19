@@ -19,13 +19,13 @@ import android.widget.Toast;
 import com.google.common.base.Strings;
 
 import br.com.teste.appteste.R;
-import br.com.teste.appteste.fragments.AboutAppFragment;
 import br.com.teste.appteste.fragments.AffiliatesFragment;
 import br.com.teste.appteste.fragments.MsgsFragment;
 import br.com.teste.appteste.fragments.MyProductsFragment;
 import br.com.teste.appteste.fragments.MyProfileFragment;
 import br.com.teste.appteste.fragments.MySalesFragment;
 import br.com.teste.appteste.fragments.NotificationsFragment;
+import br.com.teste.appteste.fragments.dialog.AboutDialog;
 
 /**
  * Created by rabsouza on 18/06/16.
@@ -60,11 +60,6 @@ public class BaseActivity extends AppCompatActivity {
                     new NavigationView.OnNavigationItemSelectedListener() {
                         @Override
                         public boolean onNavigationItemSelected(MenuItem menuItem) {
-                            CharSequence title = menuItem.getTitle();
-                            Log.i(TAG, String.format("onNavigationItemSelected: Select menu item: %s!", title));
-                            if (toolbar != null) {
-                                toolbar.setTitle(title);
-                            }
                             menuItem.setChecked(true);
 
                             closeDrawer();
@@ -72,6 +67,14 @@ public class BaseActivity extends AppCompatActivity {
                             return true;
                         }
                     });
+        }
+    }
+
+    private void changeToolbarTitle(MenuItem menuItem) {
+        CharSequence title = menuItem.getTitle();
+        Log.i(TAG, String.format("onNavigationItemSelected: Select menu item: %s!", title));
+        if (toolbar != null) {
+            toolbar.setTitle(title);
         }
     }
 
@@ -95,29 +98,34 @@ public class BaseActivity extends AppCompatActivity {
     private void onNavDrawerItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.nav_item_about_app:
-                replaceFragment(AboutAppFragment.newInstance());
-                toast(R.string.toast_blank_fragment);
+                AboutDialog.showAbout(getSupportFragmentManager());
                 break;
             case R.id.nav_item_affiliates:
+                changeToolbarTitle(menuItem);
                 replaceFragment(AffiliatesFragment.newInstance());
                 toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_msgs:
+                changeToolbarTitle(menuItem);
                 replaceFragment(MsgsFragment.newInstance());
                 toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_my_products:
+                changeToolbarTitle(menuItem);
                 replaceFragment(MyProductsFragment.newInstance());
                 toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_my_profile:
+                changeToolbarTitle(menuItem);
                 replaceFragment(MyProfileFragment.newInstance());
                 toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_my_sales:
+                changeToolbarTitle(menuItem);
                 replaceFragment(MySalesFragment.newInstance());
                 break;
             case R.id.nav_item_notifications:
+                changeToolbarTitle(menuItem);
                 replaceFragment(NotificationsFragment.newInstance());
                 toast(R.string.toast_blank_fragment);
                 break;

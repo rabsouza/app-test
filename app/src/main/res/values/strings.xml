@@ -11,4 +11,20 @@
     <string name="profile_mail">profile@xxxx.com</string>
 
     <string name="toast_blank_fragment">Em construção, verifique em breve!!!</string>
+
+    <string name="about_dialog_title">Sobre o App</string>
+    <string name="about_dialog_text">
+    <![CDATA[
+<h3>Aplicativo Vendas Digitais @2016</h3><br>
+Versao: %s<br><br>
+<b>Contato:</b><br>
+Nome: Rafael ALessandro<br>
+E-mail: rabsouza@gmail.com<br>
+<br><br>
+<b>Código fonte:</b> <a href="https://github.com/rabsouza/app-test">GitHub</a><br><br>
+<i>Código fonte live??? Isso mesmo!!!</i>
+	]]>
+    </string>
+
+    <string name="ok">OK</string>
 </resources>
