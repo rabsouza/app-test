@@ -7,12 +7,12 @@ Foi implementada seguindo o padrão de aplicação **Google Android**.
 ## Funcionalidade
 
 * Afiliados
-*Notificações
-*Mensagens
-*Sobre o App
-*Meus produtos
-*Minha conta
-*Minhas Vendas
+* Notificações
+* Mensagens
+* Sobre o App
+* Meus produtos
+* Minha conta
+* Minhas Vendas
 
 
 ## Frameworks
