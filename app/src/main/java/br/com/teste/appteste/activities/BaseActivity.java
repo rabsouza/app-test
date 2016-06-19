@@ -28,9 +28,10 @@ public class BaseActivity extends AppCompatActivity {
 
     protected DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    private Toolbar toolbar;
 
     protected void setUpToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
             Log.d(TAG, "setUpToolbar: Active support toolbar!");
             setSupportActionBar(toolbar);
@@ -51,8 +52,15 @@ public class BaseActivity extends AppCompatActivity {
                     new NavigationView.OnNavigationItemSelectedListener() {
                         @Override
                         public boolean onNavigationItemSelected(MenuItem menuItem) {
+                            CharSequence title = menuItem.getTitle();
+                            Log.i(TAG, String.format("onNavigationItemSelected: Select menu item: %s!", title));
+                            if (toolbar != null) {
+                                toolbar.setTitle(title);
+                            }
                             menuItem.setChecked(true);
+
                             closeDrawer();
+                            onNavDrawerItemSelected(menuItem);
                             return true;
                         }
                     });
@@ -76,6 +84,32 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
+    private void onNavDrawerItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.nav_item_about_app:
+                toast("Em construção, por favor aguarde!!!");
+                break;
+            case R.id.nav_item_affiliates:
+                toast("Em construção, por favor aguarde!!!");
+                break;
+            case R.id.nav_item_msgs:
+                toast("Em construção, por favor aguarde!!!");
+                break;
+            case R.id.nav_item_my_products:
+                toast("Em construção, por favor aguarde!!!");
+                break;
+            case R.id.nav_item_my_profile:
+                toast("Em construção, por favor aguarde!!!");
+                break;
+            case R.id.nav_item_my_sales:
+                toast("Em construção, por favor aguarde!!!");
+                break;
+            case R.id.nav_item_notifications:
+                toast("Em construção, por favor aguarde!!!");
+                break;
+        }
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -90,16 +124,17 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void openDrawer() {
         if (drawerLayout != null) {
+            Log.d(TAG, "openDrawer!");
             drawerLayout.openDrawer(GravityCompat.START);
         }
     }
 
     protected void closeDrawer() {
         if (drawerLayout != null) {
+            Log.d(TAG, "closeDrawer!");
             drawerLayout.closeDrawer(GravityCompat.START);
         }
     }
-
 
     protected Context getContext() {
         return this;
