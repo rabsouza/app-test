@@ -6,4 +6,5 @@
     <dimen name="no_dimen">0dp</dimen>
     <dimen name="dimen_profile_img_width">100dp</dimen>
     <dimen name="dimen_profile_img_height">100dp</dimen>
+    <dimen name="dimen_dialog_text">24dp</dimen>
 </resources>
