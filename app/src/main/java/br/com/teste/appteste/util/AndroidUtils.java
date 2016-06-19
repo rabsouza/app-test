@@ -1,8 +1,10 @@
 package br.com.teste.appteste.util;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.widget.Toast;
 
 /**
  * Created by rabsouza on 19/06/16.
@@ -22,4 +24,13 @@ public class AndroidUtils {
         }
         return versionName;
     }
+
+    public static void toast(Context context, String msg) {
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public static void toast(Context context, int msg) {
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+    }
+
 }

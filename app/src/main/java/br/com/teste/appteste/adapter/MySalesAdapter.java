@@ -11,6 +11,7 @@ import java.util.List;
 
 import br.com.teste.appteste.R;
 import br.com.teste.appteste.domain.Sale;
+import br.com.teste.appteste.util.AndroidUtils;
 
 /**
  * Created by rabsouza on 19/06/16.
@@ -37,7 +38,7 @@ public class MySalesAdapter extends RecyclerView.Adapter<MySalesViewHolder> {
     @Override
     public void onBindViewHolder(MySalesViewHolder holder, int position) {
         if (sales != null && !sales.isEmpty()) {
-            Sale sale = sales.get(position);
+            final Sale sale = sales.get(position);
             Log.i(TAG, String.format(
                     "onBindViewHolder: Fill to row position: %S with %s.", position, sale));
 
@@ -45,12 +46,19 @@ public class MySalesAdapter extends RecyclerView.Adapter<MySalesViewHolder> {
             holder.getTxtResume().setText(sale.getResume());
             holder.getTxtValue().setText(sale.getFormattedValue());
 
-            View itemView = holder.itemView;
+            final View itemView = holder.itemView;
             if (position % 2 == 0) {
                 itemView.setBackgroundResource(R.color.white);
             } else {
                 itemView.setBackgroundResource(R.color.gray);
             }
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AndroidUtils.toast(itemView.getContext(), sale.getResume());
+                }
+            });
         } else {
             Log.w(TAG, "onBindViewHolder: No content to holder!");
         }
