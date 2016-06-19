@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.IdRes;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -18,6 +19,13 @@ import android.widget.Toast;
 import com.google.common.base.Strings;
 
 import br.com.teste.appteste.R;
+import br.com.teste.appteste.fragments.AboutAppFragment;
+import br.com.teste.appteste.fragments.AffiliatesFragment;
+import br.com.teste.appteste.fragments.MsgsFragment;
+import br.com.teste.appteste.fragments.MyProductsFragment;
+import br.com.teste.appteste.fragments.MyProfileFragment;
+import br.com.teste.appteste.fragments.MySalesFragment;
+import br.com.teste.appteste.fragments.NotificationsFragment;
 
 /**
  * Created by rabsouza on 18/06/16.
@@ -87,26 +95,40 @@ public class BaseActivity extends AppCompatActivity {
     private void onNavDrawerItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.nav_item_about_app:
-                toast("Em construção, por favor aguarde!!!");
+                replaceFragment(AboutAppFragment.newInstance());
+                toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_affiliates:
-                toast("Em construção, por favor aguarde!!!");
+                replaceFragment(AffiliatesFragment.newInstance());
+                toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_msgs:
-                toast("Em construção, por favor aguarde!!!");
+                replaceFragment(MsgsFragment.newInstance());
+                toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_my_products:
-                toast("Em construção, por favor aguarde!!!");
+                replaceFragment(MyProductsFragment.newInstance());
+                toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_my_profile:
-                toast("Em construção, por favor aguarde!!!");
+                replaceFragment(MyProfileFragment.newInstance());
+                toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_my_sales:
-                toast("Em construção, por favor aguarde!!!");
+                replaceFragment(MySalesFragment.newInstance());
                 break;
             case R.id.nav_item_notifications:
-                toast("Em construção, por favor aguarde!!!");
+                replaceFragment(NotificationsFragment.newInstance());
+                toast(R.string.toast_blank_fragment);
                 break;
+        }
+    }
+
+    protected void replaceFragment(Fragment fragment) {
+        if (fragment != null) {
+            Log.d(TAG, "replaceFragment: Change to fragment!");
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container, fragment).commit();
         }
     }
 

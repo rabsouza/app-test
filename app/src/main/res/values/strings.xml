@@ -9,4 +9,6 @@
     <string name="my_sales">Minhas Vendas</string>
     <string name="profile_name">Profile Name</string>
     <string name="profile_mail">profile@xxxx.com</string>
+
+    <string name="toast_blank_fragment">Em construção, verifique em breve!!!</string>
 </resources>
