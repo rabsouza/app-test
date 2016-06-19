@@ -45,7 +45,7 @@ Foi implementada seguindo o padrão de aplicação **Google Android**.
 Fazer o clone do reposítório git e baixar as dependências
 ```sh
 $ git clone [git-repo-url] app-test
-$ cd myoffers
+$ cd app-test
 ```
 Executar o Gradle
 ```sh
