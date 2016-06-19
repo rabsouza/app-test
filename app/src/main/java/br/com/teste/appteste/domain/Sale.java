@@ -38,8 +38,8 @@ public class Sale implements Serializable {
     public String getFormattedTitle() {
         if (Strings.isNullOrEmpty(title)) {
             return "";
-        } else if (title.length() > 200) {
-            return title.substring(0, 200).concat("...");
+        } else if (title.length() > 100) {
+            return title.substring(0, 100).concat("...");
         } else {
             return title;
         }
