@@ -15,6 +15,6 @@ public class DateUtils {
         if(date == null){
             return "";
         }
-        return format.format(date);
+        return format.format(date.getTime());
     }
 }
