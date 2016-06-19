@@ -1,4 +1,4 @@
-package br.com.teste.appteste.fragments;
+package br.com.teste.appteste.fragment;
 
 
 import android.os.Bundle;

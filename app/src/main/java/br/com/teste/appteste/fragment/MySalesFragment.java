@@ -1,5 +1,4 @@
-package br.com.teste.appteste.fragments;
-
+package br.com.teste.appteste.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,16 +11,16 @@ import br.com.teste.appteste.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MyProfileFragment#newInstance} factory method to
+ * Use the {@link MySalesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyProfileFragment extends BaseFragment {
+public class MySalesFragment extends BaseFragment {
 
-    public MyProfileFragment() {
+    public MySalesFragment() {
     }
 
-    public static MyProfileFragment newInstance() {
-        MyProfileFragment fragment = new MyProfileFragment();
+    public static MySalesFragment newInstance() {
+        MySalesFragment fragment = new MySalesFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -30,7 +29,7 @@ public class MyProfileFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_my_profile, container, false);
+        return inflater.inflate(R.layout.fragment_my_sales, container, false);
     }
 
 }

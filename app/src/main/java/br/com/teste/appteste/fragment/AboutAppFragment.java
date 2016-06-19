@@ -1,4 +1,4 @@
-package br.com.teste.appteste.fragments;
+package br.com.teste.appteste.fragment;
 
 
 import android.os.Bundle;
@@ -12,26 +12,26 @@ import br.com.teste.appteste.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AffiliatesFragment#newInstance} factory method to
+ * Use the {@link AboutAppFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AffiliatesFragment extends BaseFragment {
+public class AboutAppFragment extends BaseFragment {
 
-    public AffiliatesFragment() {
+    public AboutAppFragment() {
     }
 
-    public static AffiliatesFragment newInstance() {
-        AffiliatesFragment fragment = new AffiliatesFragment();
+    public static AboutAppFragment newInstance() {
+        AboutAppFragment fragment = new AboutAppFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_affiliates, container, false);
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_about_app, container, false);
     }
 
 }

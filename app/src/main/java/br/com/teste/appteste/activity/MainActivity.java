@@ -1,4 +1,4 @@
-package br.com.teste.appteste.activities;
+package br.com.teste.appteste.activity;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -6,12 +6,14 @@ import android.util.Log;
 import java.util.Set;
 
 import br.com.teste.appteste.R;
-import br.com.teste.appteste.domains.MenuItem;
-import br.com.teste.appteste.mocks.MockMenuItem;
+import br.com.teste.appteste.domain.MenuItem;
+import br.com.teste.appteste.service.MenuItemService;
 
 public class MainActivity extends BaseActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
+
+    private MenuItemService menuItemService = new MenuItemService();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void loadCountersMenuItems() {
-        Set<MenuItem> items = MockMenuItem.createDataMock();
+        Set<MenuItem> items = menuItemService.loadActionsCountersByMenuItem();
         Log.i(TAG, String.format(
                 "loadCountersMenuItems: Loads counters %s for menu items!", items.size()));
         for (MenuItem menuItem : items) {

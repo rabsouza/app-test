@@ -1,4 +1,4 @@
-package br.com.teste.appteste.activities;
+package br.com.teste.appteste.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -19,13 +19,13 @@ import android.widget.Toast;
 import com.google.common.base.Strings;
 
 import br.com.teste.appteste.R;
-import br.com.teste.appteste.fragments.AffiliatesFragment;
-import br.com.teste.appteste.fragments.MsgsFragment;
-import br.com.teste.appteste.fragments.MyProductsFragment;
-import br.com.teste.appteste.fragments.MyProfileFragment;
-import br.com.teste.appteste.fragments.MySalesFragment;
-import br.com.teste.appteste.fragments.NotificationsFragment;
-import br.com.teste.appteste.fragments.dialog.AboutDialog;
+import br.com.teste.appteste.fragment.AffiliatesFragment;
+import br.com.teste.appteste.fragment.MsgsFragment;
+import br.com.teste.appteste.fragment.MyProductsFragment;
+import br.com.teste.appteste.fragment.MyProfileFragment;
+import br.com.teste.appteste.fragment.MySalesFragment;
+import br.com.teste.appteste.fragment.NotificationsFragment;
+import br.com.teste.appteste.fragment.dialog.AboutDialog;
 
 /**
  * Created by rabsouza on 18/06/16.

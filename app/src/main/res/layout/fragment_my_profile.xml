@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.teste.appteste.fragments.MyProfileFragment">
+    tools:context="br.com.teste.appteste.fragment.MyProfileFragment">
 
     <ImageView
         android:layout_width="match_parent"

@@ -1,10 +1,10 @@
-package br.com.teste.appteste.mocks;
+package br.com.teste.appteste.mock;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import br.com.teste.appteste.R;
-import br.com.teste.appteste.domains.MenuItem;
+import br.com.teste.appteste.domain.MenuItem;
 
 /**
  * Created by rabsouza on 18/06/16.

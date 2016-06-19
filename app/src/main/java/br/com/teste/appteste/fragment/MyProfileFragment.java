@@ -1,4 +1,4 @@
-package br.com.teste.appteste.fragments;
+package br.com.teste.appteste.fragment;
 
 
 import android.os.Bundle;
@@ -12,16 +12,16 @@ import br.com.teste.appteste.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AboutAppFragment#newInstance} factory method to
+ * Use the {@link MyProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AboutAppFragment extends BaseFragment {
+public class MyProfileFragment extends BaseFragment {
 
-    public AboutAppFragment() {
+    public MyProfileFragment() {
     }
 
-    public static AboutAppFragment newInstance() {
-        AboutAppFragment fragment = new AboutAppFragment();
+    public static MyProfileFragment newInstance() {
+        MyProfileFragment fragment = new MyProfileFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -30,8 +30,7 @@ public class AboutAppFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about_app, container, false);
+        return inflater.inflate(R.layout.fragment_my_profile, container, false);
     }
 
 }

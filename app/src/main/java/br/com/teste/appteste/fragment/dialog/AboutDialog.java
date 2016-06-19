@@ -1,4 +1,4 @@
-package br.com.teste.appteste.fragments.dialog;
+package br.com.teste.appteste.fragment.dialog;
 
 
 import android.app.Dialog;
@@ -15,7 +15,7 @@ import android.view.LayoutInflater;
 import android.widget.TextView;
 
 import br.com.teste.appteste.R;
-import br.com.teste.appteste.utils.AndroidUtils;
+import br.com.teste.appteste.util.AndroidUtils;
 
 
 /**

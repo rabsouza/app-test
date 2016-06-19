@@ -1,4 +1,4 @@
-package br.com.teste.appteste.utils;
+package br.com.teste.appteste.util;
 
 import android.app.Activity;
 import android.content.pm.PackageInfo;

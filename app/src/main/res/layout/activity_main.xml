@@ -9,7 +9,7 @@
     android:layout_margin="@dimen/no_dimen"
     android:fitsSystemWindows="true"
     android:padding="@dimen/no_dimen"
-    tools:context="br.com.teste.appteste.activities.MainActivity">
+    tools:context="br.com.teste.appteste.activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

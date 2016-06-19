@@ -1,4 +1,4 @@
-package br.com.teste.appteste.domains;
+package br.com.teste.appteste.domain;
 
 import com.google.common.base.Objects;
 
