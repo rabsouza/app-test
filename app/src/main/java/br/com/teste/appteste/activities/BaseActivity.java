@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -23,12 +24,15 @@ import br.com.teste.appteste.R;
  */
 
 public class BaseActivity extends AppCompatActivity {
+    private static final String TAG = BaseActivity.class.getSimpleName();
 
     protected DrawerLayout drawerLayout;
+    private NavigationView navigationView;
 
     protected void setUpToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
+            Log.d(TAG, "setUpToolbar: Active support toolbar!");
             setSupportActionBar(toolbar);
         }
     }
@@ -40,8 +44,9 @@ public class BaseActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         if (navigationView != null && drawerLayout != null) {
+            Log.d(TAG, "setUpNavDrawer: Active Navigation Drawer!");
             navigationView.setNavigationItemSelectedListener(
                     new NavigationView.OnNavigationItemSelectedListener() {
                         @Override
@@ -54,11 +59,13 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    private void setMenuCounter(@IdRes int itemId, String count) {
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+    protected void setMenuCounter(@IdRes int itemId, String count) {
         if (navigationView != null) {
-            TextView view = (TextView) navigationView.getMenu().findItem(itemId).getActionView();
+            MenuItem item = navigationView.getMenu().findItem(itemId);
+            TextView view = (TextView) item.getActionView();
             if (view != null) {
+                Log.d(TAG, String.format(
+                        "setMenuCounter: Load counter to menu item: %s!", item.getTitle()));
                 if (!Strings.isNullOrEmpty(count)) {
                     view.setText(count);
                     view.setVisibility(View.VISIBLE);

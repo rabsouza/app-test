@@ -7,12 +7,37 @@
             android:checked="true"
             android:icon="@drawable/ico_minhas_vendas"
             android:title="@string/my_sales"
+            app:showAsAction="ifRoom|collapseActionView"
             app:actionLayout="@layout/menu_counter" />
 
         <item
             android:id="@+id/nav_item_my_products"
             android:icon="@drawable/ico_meus_produtos"
             android:title="@string/my_products"
+            app:actionLayout="@layout/menu_counter" />
+
+        <item
+            android:id="@+id/nav_item_affiliates"
+            android:icon="@drawable/ico_afiliados"
+            android:title="@string/affiliates"
+            app:actionLayout="@layout/menu_counter" />
+
+        <item
+            android:id="@+id/nav_item_msgs"
+            android:icon="@drawable/ico_mensagens"
+            android:title="@string/msgs"
+            app:actionLayout="@layout/menu_counter" />
+
+        <item
+            android:id="@+id/nav_item_notifications"
+            android:icon="@drawable/ico_notificacoes"
+            android:title="@string/notifications"
+            app:actionLayout="@layout/menu_counter" />
+
+        <item
+            android:id="@+id/nav_item_my_profile"
+            android:icon="@drawable/ico_minha_conta"
+            android:title="@string/my_profile"
             app:actionLayout="@layout/menu_counter" />
 
         <item
