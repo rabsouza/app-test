@@ -1,6 +1,7 @@
-# App-Test
+# Vendas Digitais
 
 Essa aplicação é uma app para testar alguns componentes do Android.
+
 Foi implementada seguindo o padrão de aplicação **Google Android**.
 
 
@@ -73,7 +74,7 @@ GNU GENERAL PUBLIC LICENSE
 
 
 
-**Free Source Code, Hell Yeah!**
+**Free Source Code, Hell Yeah! :+1:**
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
