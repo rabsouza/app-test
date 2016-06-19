@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_item_my_sales"
+            android:checked="true"
+            android:icon="@drawable/ico_minhas_vendas"
+            android:title="@string/my_sales"
+            app:actionLayout="@layout/menu_counter" />
+
+        <item
+            android:id="@+id/nav_item_my_products"
+            android:icon="@drawable/ico_meus_produtos"
+            android:title="@string/my_products"
+            app:actionLayout="@layout/menu_counter" />
+
+        <item
+            android:id="@+id/nav_item_about_app"
+            android:icon="@drawable/ico_sobre_o_app"
+            android:title="@string/my_about_app"
+            app:actionLayout="@layout/menu_counter" />
+
+    </group>
+</menu>

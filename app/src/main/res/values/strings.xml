@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AppTeste</string>
+    <string name="app_name">Vendas Digitais</string>
+    <string name="my_sales">Minhas Vendas</string>
+    <string name="my_products">Meus produtos</string>
+    <string name="my_about_app">Sobre o App</string>
+    <string name="profile_name">Profile Name</string>
+    <string name="profile_mail">profile@xxxx.com</string>
 </resources>
