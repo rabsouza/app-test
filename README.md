@@ -6,17 +6,32 @@ Foi implementada seguindo o padrão de aplicação **Google Android**.
 
 ## Funcionalidade
 
-* TBD
+* Afiliados
+*Notificações
+*Mensagens
+*Sobre o App
+*Meus produtos
+*Minha conta
+*Minhas Vendas
 
 
 ## Frameworks
 
 * gradle
 * android
-* junit
-* mockito
-* hamcrest
 * guava
+* appcompat-v7
+* support-v4
+* design
+* circleimageview
+
+## Framework Test
+
+* junit
+* hamcrest
+* mockito
+* espresso
+* support-annotations
 
 ### Versão
 
@@ -34,6 +49,11 @@ $ cd myoffers
 Executar o Gradle
 ```sh
 $ gradle :app:assembleDebug
+```
+
+Executar os testes
+```sh
+$ gradle test --continue
 ```
 
 ## Download apk
