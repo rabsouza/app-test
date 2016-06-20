@@ -3,6 +3,9 @@
 apk_name="VendasDigitais.apk"
 echo "Create and publish new apk version: $apk_name!"
 
+echo "Build to app"
+gradle :app:assembleDebug
+
 echo "Copy to apk file"
 cp ./app/build/outputs/apk/app-debug.apk ./app/build/outputs/apk/$apk_name
 
