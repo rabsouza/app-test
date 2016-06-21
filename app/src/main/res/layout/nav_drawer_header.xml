@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/containerNavDrawerListViewHeader"
+    android:id="@+id/container_nav_drawer_header"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
     android:layout_margin="@dimen/no_dimen"
     android:padding="@dimen/no_dimen">
 
     <ImageView
+        android:id="@+id/nav_view_header_back"
         android:layout_width="match_parent"
         android:layout_height="@dimen/back_img_height"
         android:alpha="0.5"
@@ -16,25 +17,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_nav_padding"
         android:orientation="vertical"
-        android:paddingTop="@dimen/dimen_nav_padding"
-        android:layout_margin="@dimen/dimen_nav_padding">
+        android:paddingTop="@dimen/dimen_nav_padding">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgProfile"
+            android:id="@+id/nav_view_header_img"
             android:layout_width="@dimen/dimen_profile_img_width"
             android:layout_height="@dimen/dimen_profile_img_height"
+            android:scaleType="centerCrop"
             android:src="@drawable/avatar_profile" />
 
         <TextView
-            android:id="@+id/lblNome"
+            android:id="@+id/nav_view_header_name"
             style="@style/TextProfileName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/profile_name" />
 
         <TextView
-            android:id="@+id/lblEmail"
+            android:id="@+id/nav_view_header_mail"
             style="@style/TextProfileMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

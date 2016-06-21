@@ -5,6 +5,7 @@ import android.util.Log;
 
 import java.util.Set;
 
+import br.com.teste.appteste.MainApplication;
 import br.com.teste.appteste.R;
 import br.com.teste.appteste.domain.MenuItem;
 import br.com.teste.appteste.service.MenuItemService;
@@ -25,10 +26,11 @@ public class MainActivity extends BaseActivity {
         setUpToolbar();
         setUpNavDrawer();
         loadCountersMenuItems();
+
     }
 
     private void loadCountersMenuItems() {
-        Set<MenuItem> items = menuItemService.findActionsCountersByMenuItem();
+        Set<MenuItem> items = menuItemService.findActionsCountersByMenuItem(MainApplication.getInstance().getEmail());
         Log.i(TAG, String.format(
                 "loadCountersMenuItems: Loads counters %s for menu items!", items.size()));
         for (MenuItem menuItem : items) {

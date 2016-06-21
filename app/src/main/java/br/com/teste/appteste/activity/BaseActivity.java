@@ -13,11 +13,14 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.common.base.Strings;
+import com.squareup.picasso.Picasso;
 
+import br.com.teste.appteste.MainApplication;
 import br.com.teste.appteste.R;
 import br.com.teste.appteste.fragment.AffiliatesFragment;
 import br.com.teste.appteste.fragment.MsgsFragment;
@@ -55,6 +58,7 @@ public class BaseActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         if (navigationView != null && drawerLayout != null) {
+            loadNavigationViewHeader(navigationView);
             Log.d(TAG, "setUpNavDrawer: Active Navigation Drawer!");
             navigationView.setNavigationItemSelectedListener(
                     new NavigationView.OnNavigationItemSelectedListener() {
@@ -68,6 +72,39 @@ public class BaseActivity extends AppCompatActivity {
                         }
                     });
         }
+    }
+
+    private void loadNavigationViewHeader(NavigationView navigationView) {
+        if (navigationView != null && navigationView.getHeaderCount() > 0) {
+            View view = navigationView.getHeaderView(0);
+            if (view != null) {
+                MainApplication instance = MainApplication.getInstance();
+
+                TextView textViewName = (TextView) view.findViewById(R.id.nav_view_header_name);
+                if (textViewName != null) {
+                    textViewName.setText(instance.getUser());
+                }
+
+                TextView textViewMail = (TextView) view.findViewById(R.id.nav_view_header_mail);
+                if (textViewMail != null) {
+                    textViewMail.setText(instance.getEmail());
+                }
+
+                ImageView imageViewBlack = (ImageView) view.findViewById(R.id.nav_view_header_back);
+                if (imageViewBlack != null) {
+                    Picasso.with(navigationView.getContext())
+                            .load(instance.getUrlPhoto()).fit().into(imageViewBlack);
+                }
+
+                ImageView imageViewImg = (ImageView) view.findViewById(R.id.nav_view_header_img);
+                if (imageViewImg != null) {
+                    Picasso.with(navigationView.getContext())
+                            .load(instance.getUrlPhoto()).fit().into(imageViewImg);
+                }
+            }
+        }
+
+
     }
 
     private void changeToolbarTitle(MenuItem menuItem) {

@@ -11,7 +11,11 @@ public class MainApplication extends Application {
     private static final String TAG = MainApplication.class.getSimpleName();
 
     private static MainApplication instance = null;
-    private String user;
+
+    // TODO Utilizando fixo por não ter tempo de carregar via google plus!
+    private final String user = "Rafael Batista";
+    private final String email = "rabsouza@gmail.com";
+    private final String urlPhoto = "https://lh3.googleusercontent.com/-jUgxO0LdL9kmSkY7jEd-Na9YWzxNHcqH_m8P3C5IuFDV3fVD7X6fPqhGk8BJXGcKXSn__bFSg=w1366-h768-rw-no";
 
     public static MainApplication getInstance() {
         return instance;
@@ -35,7 +39,11 @@ public class MainApplication extends Application {
         return user;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public String getEmail() {
+        return email;
+    }
+
+    public String getUrlPhoto() {
+        return urlPhoto;
     }
 }
