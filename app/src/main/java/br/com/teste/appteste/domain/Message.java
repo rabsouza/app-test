@@ -16,6 +16,7 @@ public class Message implements Serializable {
     private String fromContact;
     private String toContact;
     private int colorIdRes;
+    private Boolean notification;
 
     public Long getId() {
         return id;
@@ -39,6 +40,14 @@ public class Message implements Serializable {
 
     public void setFromContact(String fromContact) {
         this.fromContact = fromContact;
+    }
+
+    public Boolean getNotification() {
+        return notification;
+    }
+
+    public void setNotification(Boolean notification) {
+        this.notification = notification;
     }
 
     @Override
@@ -95,6 +104,11 @@ public class Message implements Serializable {
         return this;
     }
 
+    public Message notification(Boolean notification) {
+        this.notification = notification;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "Message{" +
@@ -103,6 +117,7 @@ public class Message implements Serializable {
                 ", fromContact='" + fromContact + '\'' +
                 ", toContact='" + toContact + '\'' +
                 ", colorIdRes=" + colorIdRes +
+                ", notification=" + notification +
                 '}';
     }
 }

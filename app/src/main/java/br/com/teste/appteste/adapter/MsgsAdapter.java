@@ -49,11 +49,19 @@ public class MsgsAdapter extends RecyclerView.Adapter<MsgsViewHolder> {
                 Picasso.with(context)
                         .load(message.getUrlPhoto()).fit().into(holder.getImgImage());
                 holder.getImgImage().setVisibility(View.VISIBLE);
+                holder.getTxtShape().setVisibility(View.INVISIBLE);
             } else {
+                holder.getImgImage().setVisibility(View.INVISIBLE);
                 TextView txtShape = holder.getTxtShape();
                 txtShape.setVisibility(View.VISIBLE);
                 txtShape.setBackgroundResource(message.getColorIdRes());
                 txtShape.setText(message.getFromContact().substring(0, 1));
+            }
+
+            if (message.getNotification()) {
+                holder.getNotification().setVisibility(View.VISIBLE);
+            } else {
+                holder.getNotification().setVisibility(View.INVISIBLE);
             }
             final View itemView = holder.itemView;
             itemView.setOnClickListener(new View.OnClickListener() {

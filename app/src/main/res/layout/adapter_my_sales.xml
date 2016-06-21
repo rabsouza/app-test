@@ -13,33 +13,51 @@
     card_view:cardCornerRadius="0dp"
     card_view:cardElevation="6dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/card_view_my_sales_title"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/card_view_my_sales_resume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/card_view_my_sales_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/blue"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/card_view_my_sales_title"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:id="@+id/card_view_my_sales_notifications"
+            style="@style/ShapeRing"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:textStyle="bold"/>
+            android:layout_marginRight="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_ring_notifications"
+            android:text="!"
+            android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/card_view_my_sales_resume"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="italic"/>
-
-        <TextView
-            android:id="@+id/card_view_my_sales_value"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:textStyle="bold"
-            android:textColor="@color/blue"/>
-
-    </LinearLayout>
+    </RelativeLayout>
 </android.support.v7.widget.CardView>

@@ -53,6 +53,12 @@ public class MySalesAdapter extends RecyclerView.Adapter<MySalesViewHolder> {
                 itemView.setBackgroundResource(R.color.gray);
             }
 
+            if (sale.getNotification()) {
+                holder.getNotification().setVisibility(View.VISIBLE);
+            } else {
+                holder.getNotification().setVisibility(View.INVISIBLE);
+            }
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

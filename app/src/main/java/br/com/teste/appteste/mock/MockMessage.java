@@ -36,7 +36,7 @@ public class MockMessage {
     private static int[] colors = {
             R.drawable.shape_circle_blue,
             R.drawable.shape_circle_green,
-            R.drawable.shape_circle_orange,
+            R.drawable.shape_circle_purple,
             R.drawable.shape_circle_red
     };
 
@@ -73,7 +73,8 @@ public class MockMessage {
                 .toContact(toContact)
                 .urlPhoto(urlsPhoto[index])
                 .fromContact(fromContacts[index])
-                .colorIdRes(colors[indexColor]);
+                .colorIdRes(colors[indexColor])
+                .notification(Math.random() > 0.5);
     }
 
 

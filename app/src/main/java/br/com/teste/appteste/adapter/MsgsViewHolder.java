@@ -13,6 +13,7 @@ import br.com.teste.appteste.R;
 
 public class MsgsViewHolder extends RecyclerView.ViewHolder {
 
+    private TextView notification;
     private TextView txtShape;
     private ImageView imgImage;
     private TextView txtTitle;
@@ -21,6 +22,7 @@ public class MsgsViewHolder extends RecyclerView.ViewHolder {
         super(view);
 
         txtShape = (TextView) view.findViewById(R.id.recycler_view_msgs_shape);
+        notification = (TextView) view.findViewById(R.id.recycler_view_msgs_notifications);
         imgImage = (ImageView) view.findViewById(R.id.recycler_view_msgs_img);
         txtTitle = (TextView) view.findViewById(R.id.recycler_view_msgs_title);
     }
@@ -37,5 +39,7 @@ public class MsgsViewHolder extends RecyclerView.ViewHolder {
         return txtTitle;
     }
 
-
+    public TextView getNotification() {
+        return notification;
+    }
 }

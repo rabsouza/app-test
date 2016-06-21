@@ -10,11 +10,12 @@ import br.com.teste.appteste.R;
  * Created by rabsouza on 19/06/16.
  */
 
-public class MySalesViewHolder extends RecyclerView.ViewHolder{
+public class MySalesViewHolder extends RecyclerView.ViewHolder {
 
     private TextView txtTitle;
     private TextView txtResume;
     private TextView txtValue;
+    private TextView notification;
 
     public MySalesViewHolder(View view) {
         super(view);
@@ -22,6 +23,7 @@ public class MySalesViewHolder extends RecyclerView.ViewHolder{
         txtTitle = (TextView) view.findViewById(R.id.card_view_my_sales_title);
         txtResume = (TextView) view.findViewById(R.id.card_view_my_sales_resume);
         txtValue = (TextView) view.findViewById(R.id.card_view_my_sales_value);
+        notification = (TextView) view.findViewById(R.id.card_view_my_sales_notifications);
     }
 
     public TextView getTxtTitle() {
@@ -36,5 +38,7 @@ public class MySalesViewHolder extends RecyclerView.ViewHolder{
         return txtValue;
     }
 
-
+    public TextView getNotification() {
+        return notification;
+    }
 }

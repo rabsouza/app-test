@@ -47,4 +47,11 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="ShapeRing">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
 </resources>
