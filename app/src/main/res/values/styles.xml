@@ -1,43 +1,52 @@
 <resources>
 
     <!-- Tema base. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorControlHighlight">@color/colorControlHighlight</item>
+    <style fromContact="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item fromContact="colorPrimary">@color/colorPrimary</item>
+        <item fromContact="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item fromContact="colorAccent">@color/colorAccent</item>
+        <item fromContact="colorControlHighlight">@color/colorControlHighlight</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style fromContact="AppTheme.NoActionBar">
+        <item fromContact="windowActionBar">false</item>
+        <item fromContact="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.NoActionBar.NavDrawer">
-
+    <style fromContact="AppTheme.NoActionBar.NavDrawer">
+        <item fromContact="android:textSize">14sp</item>
+        <item fromContact="android:gravity">center_vertical</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style fromContact="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style fromContact="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
-    <style name="TextProfileName">
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@color/white</item>
+    <style fromContact="TextProfileName">
+        <item fromContact="android:textStyle">bold</item>
+        <item fromContact="android:textSize">20sp</item>
+        <item fromContact="android:textColor">@color/white</item>
     </style>
 
-    <style name="TextProfileMail">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/orange</item>
+    <style fromContact="TextProfileMail">
+        <item fromContact="android:textSize">12sp</item>
+        <item fromContact="android:textColor">@color/orange</item>
     </style>
 
-    <style name="TextItemMenuCounter">
-        <item name="android:background">@color/orange</item>
-        <item name="android:gravity">center</item>
-        <item name="android:padding">4dp</item>
-        <item name="android:textColor">@color/white</item>
+    <style fromContact="TextItemMenuCounter">
+        <item fromContact="android:background">@color/orange</item>
+        <item fromContact="android:gravity">center</item>
+        <item fromContact="android:padding">4dp</item>
+        <item fromContact="android:textSize">12sp</item>
+        <item fromContact="android:textColor">@color/white</item>
+    </style>
+
+    <style fromContact="ShapeCircle">
+        <item fromContact="android:textStyle">bold</item>
+        <item fromContact="android:gravity">center_vertical|center_horizontal</item>
+        <item fromContact="android:textSize">35sp</item>
+        <item fromContact="android:textColor">@color/white</item>
     </style>
 
 </resources>

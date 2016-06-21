@@ -19,13 +19,16 @@ public class MockMenuItem {
     public static Set<MenuItem> createDataMock() {
         Set<MenuItem> items = Sets.newHashSet();
 
-        MenuItem menuItem = new MenuItem().idRes(R.id.nav_item_affiliates).counter("121");
+
+        MenuItem menuItem = new MenuItem().idRes(R.id.nav_item_affiliates)
+                .counter("" + Math.round(Math.random() * 999));
         items.add(menuItem);
 
         MenuItem menuItem1 = new MenuItem().idRes(R.id.nav_item_msgs).counter("+50");
         items.add(menuItem1);
 
-        MenuItem menuItem2 = new MenuItem().idRes(R.id.nav_item_notifications).counter("15");
+        MenuItem menuItem2 = new MenuItem().idRes(R.id.nav_item_notifications)
+                .counter("" + Math.round(Math.random() * 9));
         items.add(menuItem2);
 
         return items;

@@ -13,8 +13,9 @@ import br.com.teste.appteste.util.DateUtils;
 /**
  * Created by rabsouza on 19/06/16.
  */
-
 public class Sale implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private Long id;
     private String title;

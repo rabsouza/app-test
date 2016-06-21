@@ -2,21 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.teste.appteste">
 
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:fromContact="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:fromContact="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:name=".MainApplication"
+        android:fromContact=".MainApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".activity.MainActivity"
+        <activity android:fromContact=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar.NavDrawer">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:fromContact="android.intent.action.MAIN" />
+                <category android:fromContact="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
