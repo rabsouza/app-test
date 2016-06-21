@@ -1,19 +1,19 @@
 <resources>
-    <string fromContact="app_name">Vendas Digitais</string>
-    <string fromContact="affiliates">Afiliados</string>
-    <string fromContact="notifications">Notificações</string>
-    <string fromContact="msgs">Mensagens</string>
-    <string fromContact="my_about_app">Sobre o App</string>
-    <string fromContact="my_products">Meus produtos</string>
-    <string fromContact="my_profile">Minha conta</string>
-    <string fromContact="my_sales">Minhas Vendas</string>
-    <string fromContact="profile_name">Profile Name</string>
-    <string fromContact="profile_mail">profile@xxxx.com</string>
+    <string name="app_name">Vendas Digitais</string>
+    <string name="affiliates">Afiliados</string>
+    <string name="notifications">Notificações</string>
+    <string name="msgs">Mensagens</string>
+    <string name="my_about_app">Sobre o App</string>
+    <string name="my_products">Meus produtos</string>
+    <string name="my_profile">Minha conta</string>
+    <string name="my_sales">Minhas Vendas</string>
+    <string name="profile_name">Profile Name</string>
+    <string name="profile_mail">profile@xxxx.com</string>
 
-    <string fromContact="toast_blank_fragment">Em construção, verifique em breve!!!</string>
+    <string name="toast_blank_fragment">Em construção, verifique em breve!!!</string>
 
-    <string fromContact="about_dialog_title">Sobre o App</string>
-    <string fromContact="about_dialog_text">
+    <string name="about_dialog_title">Sobre o App</string>
+    <string name="about_dialog_text">
     <![CDATA[
 <h3>Aplicativo Vendas Digitais @2016</h3><br>
 Versao: %s<br><br>
@@ -26,5 +26,5 @@ E-mail: rabsouza@gmail.com<br>
 	]]>
     </string>
 
-    <string fromContact="ok">OK</string>
+    <string name="ok">OK</string>
 </resources>

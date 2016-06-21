@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 
 import java.util.List;
 
+import br.com.teste.appteste.R;
 import br.com.teste.appteste.domain.Message;
 
 /**
@@ -30,6 +31,13 @@ public class MockMessage {
             "Amâncio Ortega",
             "Bill Gates",
             "Gilvan De Pinho"
+    };
+
+    private static int[] colors = {
+            R.drawable.shape_circle_blue,
+            R.drawable.shape_circle_green,
+            R.drawable.shape_circle_orange,
+            R.drawable.shape_circle_red
     };
 
     private static String[] urlsPhoto = {
@@ -63,7 +71,8 @@ public class MockMessage {
         return new Message().id(System.currentTimeMillis())
                 .toContact(toContact)
                 .urlPhoto(urlsPhoto[index])
-                .fromContact(fromContacts[index]);
+                .fromContact(fromContacts[index])
+                .colorIdRes(colors[index % colors.length]);
     }
 
 

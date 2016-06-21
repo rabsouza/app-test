@@ -15,6 +15,7 @@ public class Message implements Serializable {
     private String urlPhoto;
     private String fromContact;
     private String toContact;
+    private int colorIdRes;
 
     public Long getId() {
         return id;
@@ -61,17 +62,6 @@ public class Message implements Serializable {
         this.toContact = toContact;
     }
 
-
-    @Override
-    public String toString() {
-        return "Message{" +
-                "id=" + id +
-                ", urlPhoto='" + urlPhoto + '\'' +
-                ", fromContact='" + fromContact + '\'' +
-                ", toContact='" + toContact + '\'' +
-                '}';
-    }
-
     public Message id(Long id) {
         this.id = id;
         return this;
@@ -90,5 +80,29 @@ public class Message implements Serializable {
     public Message toContact(String toContact) {
         this.toContact = toContact;
         return this;
+    }
+
+    public int getColorIdRes() {
+        return colorIdRes;
+    }
+
+    public void setColorIdRes(int colorIdRes) {
+        this.colorIdRes = colorIdRes;
+    }
+
+    public Message colorIdRes(int colorIdRes) {
+        this.colorIdRes = colorIdRes;
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", urlPhoto='" + urlPhoto + '\'' +
+                ", fromContact='" + fromContact + '\'' +
+                ", toContact='" + toContact + '\'' +
+                ", colorIdRes=" + colorIdRes +
+                '}';
     }
 }
