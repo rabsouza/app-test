@@ -58,7 +58,7 @@ public class MockMessage {
     public static List<Message> createDataMock() {
         List<Message> messages = Lists.newArrayList();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
             messages.add(createNewMessage());
         }
 
@@ -66,13 +66,14 @@ public class MockMessage {
     }
 
     private static Message createNewMessage() {
-        int index = (int) Math.round(fromContacts.length * Math.random());
+        int index = (int) Math.round((fromContacts.length - 1) * Math.random());
+        int indexColor = (int) Math.round((colors.length - 1) * Math.random());
 
         return new Message().id(System.currentTimeMillis())
                 .toContact(toContact)
                 .urlPhoto(urlsPhoto[index])
                 .fromContact(fromContacts[index])
-                .colorIdRes(colors[index % colors.length]);
+                .colorIdRes(colors[indexColor]);
     }
 
 

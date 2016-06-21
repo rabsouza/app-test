@@ -145,7 +145,6 @@ public class BaseActivity extends AppCompatActivity {
             case R.id.nav_item_msgs:
                 changeToolbarTitle(menuItem);
                 replaceFragment(MsgsFragment.newInstance());
-                toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_my_products:
                 changeToolbarTitle(menuItem);

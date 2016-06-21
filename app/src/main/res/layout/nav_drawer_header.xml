@@ -10,14 +10,17 @@
         android:id="@+id/nav_view_header_back"
         android:layout_width="match_parent"
         android:layout_height="@dimen/back_img_height"
-        android:alpha="0.5"
+        android:alpha="0.4"
         android:scaleType="centerCrop"
         android:src="@drawable/avatar_profile" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/dimen_nav_padding"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="@dimen/dimen_nav_padding"
+        android:layout_marginRight="@dimen/dimen_nav_padding"
+        android:layout_marginTop="@dimen/dimen_nav_padding"
         android:orientation="vertical"
         android:paddingTop="@dimen/dimen_nav_padding">
 
