@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Digital Sales</string>
+    <string name="affiliates">Affiliate</string>
+    <string name="notifications">Notifications</string>
+    <string name="msgs">Messages</string>
+    <string name="my_about_app">About App</string>
+    <string name="my_products">My Products</string>
+    <string name="my_profile">My Account</string>
+    <string name="my_sales">My Sales</string>
+    <string name="profile_name">Profile Name</string>
+    <string name="profile_mail">profile@xxxx.com</string>
+        
+    <string name="toast_blank_fragment">Under construction, check back soon!!!</string>
+        
+    <string name="about_dialog_title">About App</string>
+    <string name="about_dialog_text">
+    <![CDATA[
+<h3>Application Sales Digital @2016</h3><br>
+Version: %s<br><br>
+<b>Contact:</b><br>
+Name: Rafael ALessandro<br>
+E-mail: rabsouza@gmail.com<br>
+<br><br>
+<b>Source Code:</b> <a href="https://github.com/rabsouza/app-test">GitHub</a><br><br>
+<i>Free Source Code, Hell Yeah!!!!</i>
+	]]>
+    </string>
+
+    <string name="ok">OK</string>
+    <string name="current_account_balance">Your current balance is:</string>
+    <string name="current_message">Recent messages</string>
+
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ventas Digital</string>
+    <string name="affiliates">Afiliado</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="msgs">Mensajes</string>
+    <string name="my_about_app">Acerca de la aplicación</string>
+    <string name="my_products">Mis Productos</string>
+    <string name="my_profile">Mi cuenta</string>
+    <string name="my_sales">Mis ventas</string>
+    <string name="profile_name">Nombre de perfil</string>
+    <string name="profile_mail">profile@xxxx.com</string>
+
+    <string name="toast_blank_fragment">En la construcción, vuelva otro!!!</string>
+        
+    <string name="about_dialog_title">Acerca de la aplicación</string>
+    <string name="about_dialog_text">
+    <![CDATA[
+<h3>Las ventas digitales de aplicaciones @2016</h3><br>
+Versión: %s<br><br>
+<b>Contacto:</b><br>
+Nombre: Rafael ALessandro<br>
+E-mail: rabsouza@gmail.com<br>
+<br><br>
+<b>Codigo fuente:</b> <a href="https://github.com/rabsouza/app-test">GitHub</a><br><br>
+<i>El código libre ??? Eso mismo!!!</i>
+	]]>
+    </string>
+
+    <string name="ok">OK</string>
+    <string name="current_account_balance">Su saldo actual es:</string>
+    <string name="current_message">Publicaciones recientes</string>
+</resources>

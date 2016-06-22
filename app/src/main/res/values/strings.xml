@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Vendas Digitais</string>
     <string name="affiliates">Afiliados</string>
@@ -16,7 +17,7 @@
     <string name="about_dialog_text">
     <![CDATA[
 <h3>Aplicativo Vendas Digitais @2016</h3><br>
-Versao: %s<br><br>
+Versão: %s<br><br>
 <b>Contato:</b><br>
 Nome: Rafael ALessandro<br>
 E-mail: rabsouza@gmail.com<br>
