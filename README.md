@@ -24,6 +24,9 @@ Foi implementada seguindo o padrão de aplicação **Google Android**.
 * appcompat-v7
 * support-v4
 * design
+* recyclerview
+* cardview
+* picasso
 * circleimageview
 
 ## Framework Test
