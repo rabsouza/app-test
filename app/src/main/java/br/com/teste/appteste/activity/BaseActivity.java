@@ -37,13 +37,17 @@ import br.com.teste.appteste.fragment.dialog.AboutDialog;
 public class BaseActivity extends AppCompatActivity {
     private static final String TAG = BaseActivity.class.getSimpleName();
 
-    protected DrawerLayout drawerLayout;
+    private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Toolbar toolbar;
 
-    protected void setUpToolbar() {
+    protected void setUpToolbar(int title) {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
+            if(title != 0){
+                toolbar.setTitle(title);
+            }
+
             Log.d(TAG, "setUpToolbar: Active support toolbar!");
             setSupportActionBar(toolbar);
         }
@@ -107,7 +111,7 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-    private void changeToolbarTitle(MenuItem menuItem) {
+    protected void changeToolbarTitle(MenuItem menuItem) {
         CharSequence title = menuItem.getTitle();
         Log.i(TAG, String.format("onNavigationItemSelected: Select menu item: %s!", title));
         if (toolbar != null) {
@@ -154,7 +158,6 @@ public class BaseActivity extends AppCompatActivity {
             case R.id.nav_item_my_profile:
                 changeToolbarTitle(menuItem);
                 replaceFragment(MyProfileFragment.newInstance());
-                toast(R.string.toast_blank_fragment);
                 break;
             case R.id.nav_item_my_sales:
                 changeToolbarTitle(menuItem);
@@ -216,6 +219,10 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void toast(int msg) {
         Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public Toolbar getToolbar() {
+        return toolbar;
     }
 
 }

@@ -61,7 +61,6 @@ public class MockMessage {
         for (int i = 0; i < 30; i++) {
             messages.add(createNewMessage());
         }
-
         return messages;
     }
 

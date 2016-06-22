@@ -50,11 +50,11 @@
         <TextView
             android:id="@+id/card_view_my_sales_notifications"
             style="@style/ShapeRing"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="16dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/shape_ring_notifications"
             android:text="!"
             android:visibility="gone" />

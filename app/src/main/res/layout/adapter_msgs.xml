@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/recycler_view_msgs_content"
-    android:layout_width="65dp"
+    android:layout_width="85dp"
     android:layout_height="126dp"
+    android:background="@color/transparent"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -29,9 +30,10 @@
         <TextView
             android:id="@+id/recycler_view_msgs_notifications"
             style="@style/ShapeRing"
-            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_alignParentRight="true"
             android:background="@drawable/shape_ring_notifications"
             android:text="!"
             android:visibility="gone" />

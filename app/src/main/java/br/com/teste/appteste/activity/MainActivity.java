@@ -8,6 +8,7 @@ import java.util.Set;
 import br.com.teste.appteste.MainApplication;
 import br.com.teste.appteste.R;
 import br.com.teste.appteste.domain.MenuItem;
+import br.com.teste.appteste.fragment.MyProfileFragment;
 import br.com.teste.appteste.service.MenuItemService;
 
 public class MainActivity extends BaseActivity {
@@ -23,10 +24,14 @@ public class MainActivity extends BaseActivity {
 
         Log.d(TAG, "onCreate: MainActivity!");
 
-        setUpToolbar();
+        setUpToolbar(R.string.my_profile);
         setUpNavDrawer();
         loadCountersMenuItems();
+        loadFragmentInitial();
+    }
 
+    private void loadFragmentInitial() {
+        replaceFragment(MyProfileFragment.newInstance());
     }
 
     private void loadCountersMenuItems() {

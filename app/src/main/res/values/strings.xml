@@ -27,4 +27,6 @@ E-mail: rabsouza@gmail.com<br>
     </string>
 
     <string name="ok">OK</string>
+    <string name="current_account_balance">Seu saldo atual é de:</string>
+    <string name="current_message">Mensagens recentes</string>
 </resources>
