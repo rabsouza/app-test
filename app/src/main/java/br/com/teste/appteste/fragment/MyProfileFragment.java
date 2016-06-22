@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -19,6 +20,7 @@ import br.com.teste.appteste.R;
 import br.com.teste.appteste.adapter.MsgsAdapter;
 import br.com.teste.appteste.adapter.MySalesAdapter;
 import br.com.teste.appteste.domain.Message;
+import br.com.teste.appteste.domain.Profile;
 import br.com.teste.appteste.domain.Sale;
 import br.com.teste.appteste.service.MessageService;
 import br.com.teste.appteste.service.SaleService;
@@ -40,6 +42,9 @@ public class MyProfileFragment extends BaseFragment {
     private List<Sale> sales;
     private SaleService saleService = new SaleService();
     private RecyclerView recyclerViewSales;
+
+    private TextView txtCounterMessage;
+    private TextView txtCurrentAccountBalance;
 
     public MyProfileFragment() {
     }
@@ -75,6 +80,17 @@ public class MyProfileFragment extends BaseFragment {
         super.onActivityCreated(savedInstanceState);
         loadSales();
         loadMessages();
+        loadProfileData();
+    }
+
+    private void loadProfileData() {
+        Profile profile = new Profile().sales(sales).messages(this.messages);
+        txtCounterMessage = (TextView) getActivity().findViewById(R.id.my_profile_counter_messages);
+        txtCounterMessage.setText(profile.getFormattedCounterMessages());
+
+        txtCurrentAccountBalance = (TextView) getActivity()
+                .findViewById(R.id.my_profile_current_account_balance);
+        txtCurrentAccountBalance.setText(profile.getFormattedCurrentAccountBalance());
     }
 
     public void loadSales() {

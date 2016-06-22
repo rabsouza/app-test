@@ -24,7 +24,7 @@ public class MockMenuItem {
                 .counter("" + Math.round(Math.random() * 999));
         items.add(menuItem);
 
-        MenuItem menuItem1 = new MenuItem().idRes(R.id.nav_item_msgs).counter("+50");
+        MenuItem menuItem1 = new MenuItem().idRes(R.id.nav_item_msgs).counter("+20");
         items.add(menuItem1);
 
         MenuItem menuItem2 = new MenuItem().idRes(R.id.nav_item_notifications)
