@@ -16,6 +16,7 @@ import br.com.teste.appteste.util.DateUtils;
 public class Sale implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    public static final int MAX_CHAR_TITLE = 90;
 
     private Long id;
     private String title;
@@ -39,8 +40,8 @@ public class Sale implements Serializable {
     public String getFormattedTitle() {
         if (Strings.isNullOrEmpty(title)) {
             return "";
-        } else if (title.length() > 100) {
-            return title.substring(0, 100).concat("...");
+        } else if (title.length() > MAX_CHAR_TITLE) {
+            return title.substring(0, MAX_CHAR_TITLE).concat("...");
         } else {
             return title;
         }

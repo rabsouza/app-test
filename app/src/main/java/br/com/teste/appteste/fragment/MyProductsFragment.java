@@ -2,7 +2,7 @@ package br.com.teste.appteste.fragment;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +11,13 @@ import br.com.teste.appteste.R;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {@link BaseFragment} subclass.
  * Use the {@link MyProductsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class MyProductsFragment extends BaseFragment {
+
+    private static final String TAG = MyProductsFragment.class.getSimpleName();
 
     public MyProductsFragment() {
     }
@@ -30,6 +32,8 @@ public class MyProductsFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView: Create new fragment My Product!");
+        
         return inflater.inflate(R.layout.fragment_my_products, container, false);
     }
 

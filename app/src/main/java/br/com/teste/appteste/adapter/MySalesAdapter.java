@@ -24,14 +24,14 @@ public class MySalesAdapter extends RecyclerView.Adapter<MySalesViewHolder> {
     private List<Sale> sales;
 
     public MySalesAdapter(Context context, List<Sale> sales) {
-
         this.context = context;
         this.sales = sales;
     }
 
     @Override
     public MySalesViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.adapter_my_sales, viewGroup, false);
+        View view = LayoutInflater.from(context)
+                .inflate(R.layout.adapter_my_sales, viewGroup, false);
         return new MySalesViewHolder(view);
     }
 
@@ -48,9 +48,9 @@ public class MySalesAdapter extends RecyclerView.Adapter<MySalesViewHolder> {
 
             final View itemView = holder.itemView;
             if (position % 2 == 0) {
-                itemView.setBackgroundResource(R.color.white);
-            } else {
                 itemView.setBackgroundResource(R.color.gray);
+            } else {
+                itemView.setBackgroundResource(R.color.white);
             }
 
             if (sale.getNotification()) {
@@ -62,7 +62,7 @@ public class MySalesAdapter extends RecyclerView.Adapter<MySalesViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AndroidUtils.toast(itemView.getContext(), sale.getResume());
+                    AndroidUtils.toast(itemView.getContext(), R.string.toast_blank_fragment);
                 }
             });
         } else {

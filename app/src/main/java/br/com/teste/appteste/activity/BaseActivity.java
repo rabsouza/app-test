@@ -44,7 +44,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void setUpToolbar(int title) {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
-            if(title != 0){
+            if (title != 0) {
                 toolbar.setTitle(title);
             }
 
@@ -83,6 +83,9 @@ public class BaseActivity extends AppCompatActivity {
             View view = navigationView.getHeaderView(0);
             if (view != null) {
                 MainApplication instance = MainApplication.getInstance();
+                Log.i(TAG, String.format(
+                        "loadNavigationViewHeader: Fill navigation header with user: !",
+                        instance.getUser()));
 
                 TextView textViewName = (TextView) view.findViewById(R.id.nav_view_header_name);
                 if (textViewName != null) {
@@ -107,8 +110,6 @@ public class BaseActivity extends AppCompatActivity {
                 }
             }
         }
-
-
     }
 
     protected void changeToolbarTitle(MenuItem menuItem) {
@@ -211,10 +212,6 @@ public class BaseActivity extends AppCompatActivity {
 
     protected Activity getActivity() {
         return this;
-    }
-
-    protected void toast(String msg) {
-        Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
     protected void toast(int msg) {

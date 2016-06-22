@@ -12,6 +12,7 @@ import br.com.teste.appteste.util.CurrencyUtils;
 public class Profile implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    public static final int MAX_MESSAGES_COUNTER = 20;
 
     private List<Sale> sales;
     private List<Message> messages;
@@ -45,11 +46,10 @@ public class Profile implements Serializable {
     public String getFormattedCounterMessages() {
         if (messages == null || messages.isEmpty()) {
             return "0";
-        } else if (messages.size() > 20) {
-            return "+20";
-        } else {
-            return "" + messages.size();
+        } else if (messages.size() > MAX_MESSAGES_COUNTER) {
+            return "+" + MAX_MESSAGES_COUNTER;
         }
+        return "" + messages.size();
     }
 
     public String getFormattedCurrentAccountBalance() {
@@ -60,7 +60,6 @@ public class Profile implements Serializable {
             }
             return CurrencyUtils.format(sumValues);
         }
-
         return "0";
     }
 

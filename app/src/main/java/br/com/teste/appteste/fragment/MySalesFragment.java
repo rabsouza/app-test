@@ -2,7 +2,6 @@ package br.com.teste.appteste.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,7 +20,7 @@ import br.com.teste.appteste.service.SaleService;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {@link BaseFragment} subclass.
  * Use the {@link MySalesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
@@ -46,6 +45,8 @@ public class MySalesFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView: Create new fragment My Sales!");
+
         View view = inflater.inflate(R.layout.fragment_my_sales, container, false);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view_my_sales);

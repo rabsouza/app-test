@@ -1,5 +1,7 @@
 package br.com.teste.appteste.service;
 
+import android.util.Log;
+
 import com.google.common.collect.ComparisonChain;
 
 import java.util.Collections;
@@ -14,6 +16,7 @@ import br.com.teste.appteste.mock.MockSale;
  */
 
 public class SaleService {
+    private static final String TAG = SaleService.class.getSimpleName();
 
     private Comparator<Sale> saleComparator = new Comparator<Sale>() {
         @Override
@@ -23,6 +26,8 @@ public class SaleService {
     };
 
     public List<Sale> findSalesByUser(String user) {
+        Log.i(TAG, String.format("findSalesByUser: Find sales by user: %s!", user));
+
         List<Sale> sales = MockSale.createDataMock();
         Collections.sort(sales, saleComparator);
         Collections.reverse(sales);

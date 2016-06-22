@@ -18,6 +18,7 @@
         <item
             android:id="@+id/nav_item_affiliates"
             android:icon="@drawable/ico_afiliados"
+            android:enabled="false"
             android:title="@string/affiliates"
             app:actionLayout="@layout/menu_counter" />
 
@@ -36,7 +37,7 @@
         <item
             android:id="@+id/nav_item_my_profile"
             android:icon="@drawable/ico_minha_conta"
-            android:checkable="true"
+            android:checked="true"
             android:title="@string/my_profile"
             app:actionLayout="@layout/menu_counter" />
 

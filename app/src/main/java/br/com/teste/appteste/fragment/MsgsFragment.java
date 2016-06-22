@@ -3,7 +3,6 @@ package br.com.teste.appteste.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,7 +21,7 @@ import br.com.teste.appteste.service.MessageService;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {@link BaseFragment} subclass.
  * Use the {@link MsgsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
@@ -47,6 +46,8 @@ public class MsgsFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView: Create new fragment Msgs!");
+
         View view = inflater.inflate(R.layout.fragment_msgs, container, false);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view_msgs);
@@ -66,7 +67,7 @@ public class MsgsFragment extends BaseFragment {
     public void loadMessages() {
         Log.i(TAG, "loadMessages: Load all messages by user!");
         String user = MainApplication.getInstance().getUser();
-        messages = messageService.findAllMessageByContact(user);
+        messages = messageService.findMessagesByContact(user);
 
         recyclerView.setAdapter(new MsgsAdapter(getContext(), messages));
     }

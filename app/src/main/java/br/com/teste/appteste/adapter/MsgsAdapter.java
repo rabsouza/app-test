@@ -67,7 +67,7 @@ public class MsgsAdapter extends RecyclerView.Adapter<MsgsViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AndroidUtils.toast(itemView.getContext(), message.getFromContact());
+                    AndroidUtils.toast(itemView.getContext(), R.string.toast_blank_fragment);
                 }
             });
         } else {

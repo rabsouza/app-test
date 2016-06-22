@@ -22,7 +22,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d(TAG, "onCreate: MainActivity!");
+        Log.d(TAG, "onCreate: Create new activity Main!");
 
         setUpToolbar(R.string.my_profile);
         setUpNavDrawer();

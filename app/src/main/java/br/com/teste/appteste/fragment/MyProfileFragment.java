@@ -3,7 +3,6 @@ package br.com.teste.appteste.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.List;
@@ -27,7 +27,7 @@ import br.com.teste.appteste.service.SaleService;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {@link BaseFragment} subclass.
  * Use the {@link MyProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
@@ -45,6 +45,7 @@ public class MyProfileFragment extends BaseFragment {
 
     private TextView txtCounterMessage;
     private TextView txtCurrentAccountBalance;
+    private ImageButton btnSearch;
 
     public MyProfileFragment() {
     }
@@ -59,6 +60,8 @@ public class MyProfileFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView: Create new fragment Profile!");
+
         View view = inflater.inflate(R.layout.fragment_my_profile, container, false);
 
         recyclerViewSales = (RecyclerView) view.findViewById(R.id.recycler_view_my_profile_my_sales);
@@ -70,7 +73,6 @@ public class MyProfileFragment extends BaseFragment {
         recyclerViewMessages.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         recyclerViewMessages.setItemAnimator(new DefaultItemAnimator());
         recyclerViewMessages.setHasFixedSize(true);
-
 
         return view;
     }
@@ -91,6 +93,14 @@ public class MyProfileFragment extends BaseFragment {
         txtCurrentAccountBalance = (TextView) getActivity()
                 .findViewById(R.id.my_profile_current_account_balance);
         txtCurrentAccountBalance.setText(profile.getFormattedCurrentAccountBalance());
+
+        btnSearch = (ImageButton) getActivity().findViewById(R.id.my_profile_search);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast(R.string.toast_blank_fragment);
+            }
+        });
     }
 
     public void loadSales() {
@@ -104,7 +114,7 @@ public class MyProfileFragment extends BaseFragment {
     public void loadMessages() {
         Log.i(TAG, "loadMessages: Load all messages by user!");
         String user = MainApplication.getInstance().getUser();
-        messages = messageService.findAllMessageByContact(user);
+        messages = messageService.findMessagesByContact(user);
 
         recyclerViewMessages.setAdapter(new MsgsAdapter(getContext(), messages));
     }

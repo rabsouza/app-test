@@ -19,7 +19,6 @@ public class MockMenuItem {
     public static Set<MenuItem> createDataMock() {
         Set<MenuItem> items = Sets.newHashSet();
 
-
         MenuItem menuItem = new MenuItem().idRes(R.id.nav_item_affiliates)
                 .counter("" + Math.round(Math.random() * 999));
         items.add(menuItem);

@@ -16,7 +16,9 @@ public class MenuItemService {
     private static final String TAG = MenuItemService.class.getSimpleName();
 
     public Set<MenuItem> findActionsCountersByMenuItem(String email) {
-        Log.i(TAG, String.format("findActionsCountersByMenuItem: Find all actions by mail:", email));
+        Log.i(TAG, String.format(
+                "findActionsCountersByMenuItem: Find actions by mail: %s!", email));
+
         return MockMenuItem.createDataMock();
     }
 

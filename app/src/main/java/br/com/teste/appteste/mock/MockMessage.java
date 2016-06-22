@@ -30,14 +30,16 @@ public class MockMessage {
             "Warren Buffett",
             "Amâncio Ortega",
             "Bill Gates",
-            "Gilvan De Pinho"
+            "Gilvan De Pinho",
+            "Silvio Santos"
     };
 
     private static int[] colors = {
             R.drawable.shape_circle_blue,
             R.drawable.shape_circle_green,
             R.drawable.shape_circle_purple,
-            R.drawable.shape_circle_red
+            R.drawable.shape_circle_red,
+            R.drawable.shape_circle_pink
     };
 
     private static String[] urlsPhoto = {
@@ -52,13 +54,14 @@ public class MockMessage {
             null,
             null,
             "http://i1.wp.com/top10mais.org/wp-content/uploads/2011/12/2-top-10-homens-mais-ricos-do-mundo-2012-e1326944730866.jpg?resize=200%2C200",
-            "https://pbs.twimg.com/profile_images/730817442000306176/ygd0tRyj.jpg"
+            "https://pbs.twimg.com/profile_images/730817442000306176/ygd0tRyj.jpg",
+            null
     };
 
     public static List<Message> createDataMock() {
         List<Message> messages = Lists.newArrayList();
 
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 25; i++) {
             messages.add(createNewMessage());
         }
         return messages;

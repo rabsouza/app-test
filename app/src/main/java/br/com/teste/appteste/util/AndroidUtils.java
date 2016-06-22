@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.util.Log;
 import android.widget.Toast;
 
 /**
@@ -11,6 +12,8 @@ import android.widget.Toast;
  */
 
 public class AndroidUtils {
+
+    private static final String TAG = AndroidUtils.class.getSimpleName();
 
     public static String getVersionName(Activity activity) {
         PackageManager pm = activity.getPackageManager();
@@ -22,6 +25,8 @@ public class AndroidUtils {
         } catch (PackageManager.NameNotFoundException e) {
             versionName = "N/A";
         }
+
+        Log.d(TAG, String.format("getVersionName: Version app: %s!", versionName));
         return versionName;
     }
 

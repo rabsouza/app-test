@@ -11,6 +11,7 @@ import android.support.v7.app.AlertDialog;
 import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
@@ -23,8 +24,10 @@ import br.com.teste.appteste.util.AndroidUtils;
  */
 public class AboutDialog extends DialogFragment {
 
-    // Método utilitário para mostrar o dialog
+    private static final String TAG = AboutDialog.class.getSimpleName();
+
     public static void showAbout(android.support.v4.app.FragmentManager fm) {
+        Log.i(TAG, "showAbout: Show dialog about!");
         FragmentTransaction ft = fm.beginTransaction();
         Fragment prev = fm.findFragmentByTag("dialog_about");
         if (prev != null) {
@@ -36,18 +39,15 @@ public class AboutDialog extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        // Cria o HTML com o texto de about
         SpannableStringBuilder aboutBody = new SpannableStringBuilder();
         String versionName = AndroidUtils.getVersionName(getActivity());
         aboutBody.append(Html.fromHtml(getString(R.string.about_dialog_text, versionName)));
 
-        // Infla o layout
         LayoutInflater inflater = LayoutInflater.from(getActivity());
         TextView view = (TextView) inflater.inflate(R.layout.dialog_about, null);
         view.setText(aboutBody);
         view.setMovementMethod(new LinkMovementMethod());
 
-        // Cria o dialog customizado
         return new AlertDialog.Builder(getActivity())
                 .setTitle(R.string.about_dialog_title)
                 .setView(view)
