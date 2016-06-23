@@ -15,7 +15,7 @@ Foi implementada seguindo o padrão de aplicação **Google Android**.
 * Minha conta
 * Minhas Vendas
 
-## Suporte a multi idioma
+## Suporte a multi-idioma
 * PortuguÊs Brasil (pt)(default)
 * Inglês (en)
 * Espanhol (es)

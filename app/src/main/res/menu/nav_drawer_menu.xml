@@ -46,7 +46,7 @@
         <item
             android:id="@+id/nav_item_about_app"
             android:icon="@drawable/ico_sobre_o_app"
-            android:title="@string/my_about_app"
+            android:title="@string/about_app"
             app:actionLayout="@layout/menu_counter" />
 
     </group>
