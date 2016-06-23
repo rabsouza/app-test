@@ -15,6 +15,10 @@ Foi implementada seguindo o padrão de aplicação **Google Android**.
 * Minha conta
 * Minhas Vendas
 
+## Suporte a multi idioma
+* PortuguÊs Brasil (pt)(default)
+* Inglês (en)
+* Espanhol (es)
 
 ## Frameworks
 
@@ -34,6 +38,7 @@ Foi implementada seguindo o padrão de aplicação **Google Android**.
 * junit
 * hamcrest
 * mockito
+* powemock
 * espresso
 * support-annotations
 
